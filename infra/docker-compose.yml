@@ -1,0 +1,9 @@
+services:
+  app:
+    image: ${ECR_URI}:latest
+    container_name: fastapi
+    ports:
+      - "80:8000"
+    restart: always
+    environment:
+      - UVICORN_WORKERS=2
